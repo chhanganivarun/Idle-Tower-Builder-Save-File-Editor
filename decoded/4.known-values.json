@@ -1,0 +1,10 @@
+{
+  "source": "SAVE GAMES\\4.txt",
+  "values": {
+    "main_tower_num_stories_built": 15
+  },
+  "notes": [
+    "User supplied this as the save with 15 floors completed.",
+    "Aligned comparison against 3.txt maps the likely field from 3.json index 294 = 14 to 4.json index 274 = 15."
+  ]
+}

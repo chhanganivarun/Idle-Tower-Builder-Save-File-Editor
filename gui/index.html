@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Idle Tower Builder Save Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="pako.min.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>Idle Tower Builder Save Editor</h1>
+        <p>Decode, edit, and re-encode Babel Tower / Idle Tower Builder save strings.</p>
+      </div>
+      <div class="status" id="status">No save loaded</div>
+    </header>
+
+    <section class="panel input-panel">
+      <div class="toolbar">
+        <label class="file-button">
+          <input id="fileInput" type="file" accept=".txt,.save,.json,text/plain,application/json">
+          Open Save or JSON
+        </label>
+        <button id="loadTextButton" type="button">Load Text</button>
+        <!-- <button id="sample12Button" type="button" class="btn-secondary">Sample 12.json</button>
+        <button id="sample7Button" type="button" class="btn-secondary">Sample 7.json</button> -->
+        <button id="exportButton" type="button" disabled>Export Save</button>
+        <button id="downloadJsonButton" type="button" disabled>Download JSON</button>
+      </div>
+      <div class="io-grid">
+        <div class="io-block">
+          <label class="io-label" for="saveText">Input save or JSON</label>
+          <textarea id="saveText" spellcheck="false" placeholder="Paste [A|...] save text or JSON here"></textarea>
+        </div>
+        <div class="io-block">
+          <div class="io-label-row">
+            <label class="io-label" for="outputSaveText">Output save text</label>
+            <button id="copyOutputButton" type="button" class="btn-secondary" disabled>Copy</button>
+          </div>
+          <textarea id="outputSaveText" spellcheck="false" readonly placeholder="Click Export Save to generate [A|...] text here"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel important-panel" id="importantPanel">
+      <div class="section-heading">
+        <h2>Important Values</h2>
+        <span class="muted" id="towerObjectInfo"></span>
+      </div>
+      <p class="help muted" id="importantHelp">
+        Load a save to edit values. <strong>Main tower storeys</strong> and <strong>moon stone tower</strong> (% progress) are on their machine objects — not global index 22. Leaderboard scores are stored separately (see note after load).
+      </p>
+      <div id="importantFields" class="fields important-fields"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Search Values</h2>
+      <div class="search-row">
+        <input id="searchInput" type="text" placeholder="index, label, or value (e.g. storeys, 63)">
+        <button id="searchButton" type="button" disabled>Search</button>
+      </div>
+      <div id="searchResults" class="results"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <h2>Number Array</h2>
+        <div class="muted" id="arrayInfo"></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Value #</th>
+              <th>Index</th>
+              <th>Meaning</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody id="valuesBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

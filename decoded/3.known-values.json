@@ -1,0 +1,32 @@
+{
+  "source": "SAVE GAMES\\3.txt",
+  "values": {
+    "helicopter_level": 115,
+    "newton_level": 75,
+    "science": "around 3.84 million",
+    "blimp_level": 325,
+    "windmill_one_level": 110,
+    "windmill_two_level": 110,
+    "steam_machine_level": 144,
+    "drum_level": 180,
+    "quarry_level": 288,
+    "stone_transport_level": 115,
+    "elephant_level": 280,
+    "stone": "around 583 sextillion",
+    "stone_in_brick_producer": "around 47 quintillion",
+    "bricks": "around 4.23 quintillion, maybe different because game was running",
+    "brick_producer_level": 224,
+    "field_level": 116,
+    "hay": "around 40 quadrillion",
+    "tent_level": 108,
+    "sprinkler_level": 128,
+    "plank_producer_level": 216,
+    "forest_level": 252,
+    "well_level": 518,
+    "water_extractor_level": 210,
+    "wood_transporter_level": 250,
+    "wood": "some billions",
+    "wood_at_plank_producer": "around 589 trillion",
+    "planks": "around 91 trillion"
+  }
+}
